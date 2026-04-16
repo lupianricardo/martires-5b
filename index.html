@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo 5°B - Mártires de Uruapan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏫 Grupo 5°B</h1>
+        <h2>"Mártires de Uruapan"</h2>
+        <nav>
+            <a href="#artes">Artes Visuales</a> | 
+            <a href="#ciencias">Ciencias</a> | 
+            <a href="#letras">Letras</a>
+        </nav>
+    </header>
+
+    <section id="artes">
+        <h2 class="titulo-seccion">🎨 Galería de Arte</h2>
+        <div class="galeria">
+            <div class="tarjeta-trabajo" onclick="abrirZoom(this)">
+                <img src="tu-imagen1.jpg" alt="Dibujo de Paisaje">
+                <div class="info">
+                    <h3>El Amanecer</h3>
+                    <p>Por: <strong>Juan R.</strong></p>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="ciencias" style="background-color: #e8f5e9;">
+        <h2 class="titulo-seccion">🔬 Proyectos de Ciencia</h2>
+        <div class="galeria">
+            </div>
+    </section>
+
+    <div id="modalZoom" class="modal" onclick="cerrarZoom()">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imgExpandida">
+        <div id="capitulo"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
