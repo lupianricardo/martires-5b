@@ -130,3 +130,39 @@ footer { padding: 40px; text-align: center; color: #636e72; }
     border: none;
     margin-top: 5vh;
 }
+
+/* Estilo para las tarjetas de enlace */
+.tarjeta-enlace {
+    text-decoration: none; /* Quita el subrayado azul del link */
+    display: block;
+    color: inherit;
+}
+
+.icono-enlace {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe); /* Un color azulado suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.icono-enlace span {
+    font-size: 4rem; /* El emoji se verá grande */
+    margin-bottom: 10px;
+}
+
+.icono-enlace p {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta-enlace:hover .icono-enlace {
+    background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+    transform: scale(1.02);
+}
