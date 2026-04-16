@@ -1,36 +1,131 @@
-/* Estilos para las Secciones */
-.titulo-seccion {
+/* Importamos una tipografía más divertida de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap');
+
+:root {
+    --primario: #6C5CE7;    /* Morado suave */
+    --secundario: #00CEC9;  /* Turquesa */
+    --acento: #FF7675;      /* Coral */
+    --fondo: #F0F2F5;       /* Gris muy claro */
+    --blanco: #FFFFFF;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--fondo);
+    margin: 0;
+    color: #2D3436;
+}
+
+/* Encabezado estilo Banner de Canva */
+header {
+    background: linear-gradient(135deg, var(--primario), var(--secundario));
+    color: var(--blanco);
+    padding: 60px 20px;
     text-align: center;
-    padding-top: 30px;
-    color: #2c3e50;
-    font-size: 2rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }
 
-nav { margin-top: 15px; }
-nav a { color: #d35400; text-decoration: none; font-weight: bold; margin: 0 10px; }
-
-/* Estilos para el Zoom */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.9);
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-.modal-contenido {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    margin-top: 5%;
-    border: 5px solid white;
+header h2 {
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 10px;
 }
 
-.cerrar {
-    position: absolute;
-    top: 20px; right: 35px;
-    color: white; font-size: 40px;
+/* Navegación estilo botones */
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+nav a:hover {
+    background: var(--blanco);
+    color: var(--primario);
+}
+
+/* Tarjetas estilo Canva */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-trabajo {
+    background: var(--blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.tarjeta-trabajo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+}
+
+.tarjeta-trabajo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    margin: 0 0 10px 0;
+    color: var(--primario);
+}
+
+.info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #636e72;
+}
+
+/* Secciones personalizadas */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.titulo-seccion {
+    margin-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primario);
+    border-left: 5px solid var(--acento);
+    padding-left: 15px;
+}
+
+/* Ajuste del Zoom (Modal) */
+.modal-contenido {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
