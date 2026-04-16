@@ -12,42 +12,48 @@
         <h1>🏫 Grupo 5°B</h1>
         <h2>"Mártires de Uruapan"</h2>
         <nav>
-            <a href="#artes">Artes Visuales</a> | 
-            <a href="#ciencias">Ciencias</a> | 
+            <a href="#artes">Artes Visuales</a>
+            <a href="#ciencias">Ciencias</a>
             <a href="#letras">Letras</a>
         </nav>
     </header>
 
-    <section id="artes">
-        <h2 class="titulo-seccion">🎨 Galería de Arte</h2>
-        <div class="galeria">
-            <div class="tarjeta-trabajo" onclick="abrirZoom(this)">
-                <img src="Bellotamusculo.webp" alt="Chica superpoderosa">
-                <div class="info">
-                    <h3>Bellota</h3>
-                    <p>Por: <strong>Santi</strong></p>
+    <main>
+        <section id="artes">
+            <h2 class="titulo-seccion">🎨 Galería de Arte</h2>
+            <div class="galeria">
+                <div class="tarjeta-trabajo" onclick="abrirZoom(this)">
+                    <img src="Bellotamusculo.webp" alt="Chica superpoderosa">
+                    <div class="info">
+                        <h3>Bellota</h3>
+                        <p>Por: <strong>Santi</strong></p>
+                    </div>
                 </div>
-            </div>
-            <div class="tarjeta-trabajo" onclick="abrirZoom(this)">
-                <img src="tu-imagen1.jpg" alt="Dibujo de Paisaje">
-                <div class="info">
-                    <h3>El Amanecer</h3>
-                    <p>Por: <strong>Juan R.</strong></p>
                 </div>
-            </div>
-            </div>
-    </section>
+        </section>
 
-    <section id="ciencias" style="background-color: #e8f5e9;">
-        <h2 class="titulo-seccion">🔬 Proyectos de Ciencia</h2>
-        <div class="galeria">
+        <section id="ciencias" class="seccion-color">
+            <h2 class="titulo-seccion">🔬 Proyectos de Ciencia</h2>
+            <div class="galeria">
+                <div class="tarjeta-trabajo" onclick="abrirZoom(this)">
+                    <img src="https://via.placeholder.com/400x300" alt="Maqueta">
+                    <div class="info">
+                        <h3>Sistema Solar</h3>
+                        <p>Por: <strong>María García</strong></p>
+                    </div>
+                </div>
             </div>
-    </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Grupo 5°B - Escuela Mártires de Uruapan</p>
+    </footer>
 
     <div id="modalZoom" class="modal" onclick="cerrarZoom()">
         <span class="cerrar">&times;</span>
         <img class="modal-contenido" id="imgExpandida">
-        <div id="capitulo"></div>
+        <div id="nombreAlumnoZoom"></div>
     </div>
 
     <script src="script.js"></script>
